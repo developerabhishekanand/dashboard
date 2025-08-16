@@ -1,10 +1,10 @@
 import express from 'express';
 const app = express();
 import dotenv from 'dotenv';
-import connectDB from "./db.js";
+import connectDB from "../db.js";
 const PORT = process.env.PORT || 8080;
-import userRoutes from "./routes/userRoutes.js";
-import bookRoutes from "./routes/bookRoutes.js";
+import userRoutes from "../routes/userRoutes.js";
+import bookRoutes from "../routes/bookRoutes.js";
 
 // In your server.js or index.js
 import cors from'cors';
