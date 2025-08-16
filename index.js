@@ -16,8 +16,7 @@ app.use(express.json());
 // Load environment variables
 dotenv.config();
 
-// Connect to MongoDB
-connectDB();
+await connectDB('bookstore');
 
 app.get('/', (req, res) => {
     res.send('API is running...');
