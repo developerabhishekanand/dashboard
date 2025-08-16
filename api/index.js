@@ -1,4 +1,5 @@
 import express from 'express';
+import serverless from 'serverless-http';
 const app = express();
 import dotenv from 'dotenv';
 import connectDB from "../db.js";
@@ -39,3 +40,5 @@ app.use("/book", bookRoutes);
 app.listen(8080, () => {
     console.log('Server is listenin on PORT :' + PORT);
 })
+
+export const handler = serverless(app);
